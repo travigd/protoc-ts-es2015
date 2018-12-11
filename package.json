@@ -1,6 +1,6 @@
 {
   "name": "protoc-ts-es2015",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "A protoc plugin to generate idiomatic TypeScript/ES2015 protobuf classes.",
   "main": "./dist/plugin.js",
   "scripts": {
