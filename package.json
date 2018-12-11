@@ -1,0 +1,34 @@
+{
+  "name": "protoc-ts-es2015",
+  "version": "1.0.0",
+  "description": "A protoc plugin to generate idiomatic TypeScript/ES2015 protobuf classes.",
+  "main": "./dist/plugin.js",
+  "scripts": {
+    "build": "tsc -p . && chmod +x ./dist/plugin.js",
+    "build:protoc-examples": "protoc -I. --python",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "protoc-gen-ts-es2015": "./dist/plugin.js"
+  },
+  "author": "Travis DePrato",
+  "repo": "https://github.com/travigd/protoc-ts-es2015",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "dependencies": {
+    "@types/dedent": "^0.7.0",
+    "@types/google-protobuf": "^3.2.7",
+    "@types/indent-string": "^3.0.0",
+    "@types/node": "^10.12.12",
+    "dedent": "^0.7.0",
+    "google-protobuf": "^3.6.1",
+    "indent-string": "^3.2.0",
+    "typescript": "^3.2.2"
+  },
+  "devDependencies": {
+    "ts-protoc-gen": "^0.8.0"
+  }
+}

@@ -1,0 +1,14 @@
+#!/bin/bash
+set -xe
+
+NODE_BIN="./node_modules/.bin"
+PROTOC_GEN_TS=$(which protoc-gen-ts || echo "$NODE_BIN/protoc-gen-ts")
+PROTOC_GEN_TS_ES2015=$(which protoc-gen-ts-es2015 || echo "./dist/plugin.js")
+
+protoc \
+    --plugin="protoc-gen-ts=$PROTOC_GEN_TS" \
+    --plugin="protoc-gen-ts-es2015=$PROTOC_GEN_TS_ES2015" \
+    --js_out="import_style=commonjs,binary:./" \
+    --ts_out="./" \
+    --ts-es2015_out="./" \
+    ./example/*.proto

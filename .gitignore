@@ -1,0 +1,5 @@
+dist/
+node_modules/
+example/*.ts
+example/*.js
+protoc-ts-es2015*.tgz
